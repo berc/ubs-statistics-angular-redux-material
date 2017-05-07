@@ -1,0 +1,6 @@
+<div class="mhxl">
+    <label class="c-ubs-statistics__label">{{label}}</label>
+    <md-select placeholder="Select Time series" [ngModel]="selectedItem" (ngModelChange)="onChangedSelection($event.target.value)" class="c-filter__input c-filter__input--double">
+        <md-option *ngFor="let i of items" [value]="i">{{i}}</md-option>
+    </md-select>
+</div>

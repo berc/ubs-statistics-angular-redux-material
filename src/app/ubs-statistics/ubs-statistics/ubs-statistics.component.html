@@ -1,0 +1,14 @@
+<md-progress-bar *ngIf="isLoading" mode="indeterminate" color="primary"></md-progress-bar>
+
+<div class="c-ubs-statistics o-centered-layout">
+
+    <h1 class="mhxl">Statistical overview of UBS open data</h1>
+
+    <ubs-statistics-filters [monitoredYears]="monitoredYears" [earningTimeSeries]="earningTimeSeries" [workingHoursRequired]="workingHoursRequired"
+                            (onChangedFilters)="onChangedFilters($event)"></ubs-statistics-filters>
+
+    <ubs-statistics-table [pivotTable]="pivotTable" [isLoading]="isLoadingDataTable"></ubs-statistics-table>
+
+    <ubs-statistics-chart [pivotTable]="geoZonePivotTable" [isLoading]="isLoadingDataTable"></ubs-statistics-chart>
+
+</div>

@@ -1,0 +1,8 @@
+<md-card class="mhl">
+    <md-card-header>
+        <h3 class="mhl">Selected Time Series table</h3>
+    </md-card-header>
+    <div class="mhl">
+        <ngx-datatable class="material" [rows]="pivotTable.rows" [columns]="pivotTable.cols" [scrollbarH]="true" [loadingIndicator]="isLoading"></ngx-datatable>
+    </div>
+</md-card>

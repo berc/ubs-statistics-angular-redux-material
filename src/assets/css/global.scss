@@ -1,0 +1,134 @@
+//@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '~@angular/material/core/theming/all-theme';
+
+// NOTE: Theming is currently experimental and not yet publicly released!
+
+@include md-core();
+
+$primary: md-palette($md-deep-purple);
+$accent:  md-palette($md-amber, A200, A100, A400);
+
+$theme: md-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
+
+.m2app-dark {
+  $dark-primary: md-palette($md-pink, 700, 500, 900);
+  $dark-accent:  md-palette($md-blue-grey, A200, A100, A400);
+  $dark-warn:    md-palette($md-deep-orange);
+
+  $dark-theme: md-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+  @include angular-material-theme($dark-theme);
+}
+
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.scss';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+
+body {
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+
+  // Helps fonts on OSX looks more consistent with other systems
+  // Isn't currently in button styles due to performance concerns
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  md-sidenav {
+    min-width: 15%;
+
+    [md-button] {
+      width: 100%;
+      position: relative;
+      bottom: 0;
+      margin: 24px 0;
+    }
+  }
+
+  .demo-content {
+    padding: 32px;
+  }
+
+  md-toolbar {
+    md-icon {
+      cursor: pointer;
+    }
+
+    .demo-toolbar {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  .md-select-panel {
+    max-width: inherit !important;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'),
+    url(https://fonts.gstatic.com/s/materialicons/v17/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body{
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+app {
+  display:flex;
+  flex-direction: column;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.mhl {
+  margin-bottom: 1em;
+}
+
+.mhxl {
+  margin-bottom: 2em;
+}
+
+.mhs {
+  margin-bottom: 0.5em;
+}
+
+.o-centered-layout {
+  max-width: 1128px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+}
+

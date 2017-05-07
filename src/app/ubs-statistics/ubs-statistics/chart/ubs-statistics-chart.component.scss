@@ -1,0 +1,54 @@
+.c-filter__label {
+    display: inline-block;
+    margin-left: 2em;
+    margin-right: 2em;
+    width: 200px;
+}
+
+.c-filter__input {
+    margin-left: 2em;
+    margin-right: 2em;
+    width: 200px;
+    &.c-filter__input--double {
+        width: 470px;
+    }
+}
+
+.c-filter__icon {
+    width: 2em;
+    height: 2em;
+}
+
+.c-ubs-statistics__label {
+    display: inline-block;
+    margin-left: 2em;
+    margin-right: 1em;
+    width: 240px;
+}
+
+.c-ubs-statistics__input {
+    margin-left: 2em;
+    margin-right: 2em;
+    width: 150px;
+}
+
+.c-ubs-statistics__icon {
+    width: 2em;
+    height: 2em;
+}
+
+.c-ubs-statistics__card {
+    position: relative;
+    width: 400px;
+    margin: 2em 0;
+}
+
+.c-cart--action {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.c-ubs-statistics__input--edit {
+    margin: 16px 0;
+}

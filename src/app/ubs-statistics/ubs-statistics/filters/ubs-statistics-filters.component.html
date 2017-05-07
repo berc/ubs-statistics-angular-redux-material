@@ -1,0 +1,31 @@
+<md-card class="mhl">
+    <md-card-header>
+        <h3 class="mhl">Filters</h3>
+    </md-card-header>
+
+    <div class="mhl">
+        <div class="mhxl">
+            <label class="c-ubs-statistics__label">Years range</label>
+            <md-select placeholder="From year" [(ngModel)]="selectedFromYear" (ngModelChange)="changedFromYear(selectedFromYear)" class="c-filter__input">
+                <md-option *ngFor="let i of monitoredYearsFrom" [value]="i">{{i}}</md-option>
+            </md-select>
+            <md-select placeholder="To year" [(ngModel)]="selectedToYear" (ngModelChange)="changedToYear(selectedToYear)" class="c-filter__input">
+                <md-option *ngFor="let i of monitoredYearsTo" [value]="i">{{i}}</md-option>
+            </md-select>
+        </div>
+
+        <div class="mhxl">
+            <label class="c-ubs-statistics__label">Earnings: Time Series</label>
+            <md-select placeholder="Select Time series" [(ngModel)]="selectedTimeSerie" (ngModelChange)="changedSelectedTimeSerie(selectedTimeSerie)" class="c-filter__input c-filter__input--double">
+                <md-option *ngFor="let i of earningTimeSeries" [value]="i">{{i}}</md-option>
+            </md-select>
+        </div>
+
+        <div class="mhxl">
+            <label class="c-ubs-statistics__label">Working time required to buy... [for weighted average]</label>
+            <md-select placeholder="Select weighted ratio" [(ngModel)]="selectedHoursRequired" (ngModelChange)="changedSelectedHoursRequired(selectedHoursRequired)" class="c-filter__input c-filter__input--double">
+                <md-option *ngFor="let i of workingHoursRequired" [value]="i">{{i}}</md-option>
+            </md-select>
+        </div>
+    </div>
+</md-card>
